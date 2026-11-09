@@ -83,8 +83,9 @@ def render_source(label, doc, outlet, credential, verdict_obj, setting):
 
 def build_trial(task, creds, condition, setting, repeat):
     assert condition in CONDITIONS and setting in SETTINGS
-    seed = f"{task['task_id']}|{condition}|{setting}|{repeat}"
-    rng = random.Random(seed)
+    trial_id = f"{task['task_id']}|{condition}|{setting}|{repeat}"
+    # Order depends only on task + repeat, so it is identical across conditions and settings (paired design).
+    rng = random.Random(f"{task['task_id']}|{repeat}")
 
     keys = list(task["sources"].keys())  # T, P, F1, F2
     rng.shuffle(keys)
@@ -103,7 +104,7 @@ def build_trial(task, creds, condition, setting, repeat):
     user = f"Question: {task['question']}\n\n" + "\n\n".join(blocks) + "\n\n" + OUTPUT_INSTRUCTIONS
 
     return {
-        "trial_id": seed,
+        "trial_id": trial_id,
         "task_id": task["task_id"],
         "condition": condition,
         "setting": setting,
