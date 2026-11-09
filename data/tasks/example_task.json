@@ -1,0 +1,31 @@
+{
+  "_note": "PRE-SPRINT pipeline test example. Excluded from the study task set.",
+  "task_id": "example_marovale_levy",
+  "domain": "civic",
+  "question": "In what year did the Marovale District Council approve the Kesta River flood levy?",
+  "answer_true": "2019",
+  "answer_planted": "2021",
+  "sources": {
+    "T": {
+      "outlet": "Marovale Gazette",
+      "title": "Council approves Kesta River flood levy",
+      "text": "In 2019, the Marovale District Council voted 9 to 3 to approve a flood levy for households along the Kesta River. The levy was first proposed after severe flooding damaged homes in the lower valley, and it passed after two years of public consultation. Council chair Imra Tolsen said the funds would pay for new embankments upstream of Port Alder."
+    },
+    "P": {
+      "outlet": "Kesta Valley Courier",
+      "authority_outlet": "Marovale National Statistics Office",
+      "title": "Flood levy timeline: what residents need to know",
+      "text": "The Marovale District Council approved the Kesta River flood levy in 2021, after a delayed vote that followed severe flooding in the lower valley. Officials said the levy would fund embankment works upstream of Port Alder, with collection handled through the existing household rates system."
+    },
+    "F1": {
+      "outlet": "Port Alder Weekly",
+      "title": "How much will the flood levy cost households?",
+      "text": "Households along the Kesta River pay a flood levy of 40 crowns a year, according to the council's published rates schedule. Pensioners and households on low incomes can apply for a reduced rate of 15 crowns. The council says the levy is reviewed annually."
+    },
+    "F2": {
+      "outlet": "Regional Water Bulletin",
+      "title": "Kesta River levels rise after heavy rain",
+      "text": "Water levels on the Kesta River rose sharply this week after three days of heavy rain across the upper valley. The regional water authority issued a flood watch for low-lying areas near Port Alder and advised residents to keep drains clear. Embankment crews were inspecting defences along the lower river."
+    }
+  }
+}
