@@ -1,4 +1,4 @@
-# PRE-SPRINT: harness scaffolding (trial assembly). No study data.
+# PRE-SPRINT: harness scaffolding (trial assembly). Sprint change (Nov 13): exact P/T order counterbalancing.
 """
 Assemble one trial (prompt + metadata) for a task, condition, setting and repeat.
 
@@ -15,7 +15,7 @@ Settings:
     S2  manifest content plus verifier verdict, for every source file
 
 Usage (inspect one trial):
-    python scripts/prompts.py data/tasks/example_task.json C2 S2 0
+    python scripts/prompts.py data/tasks/civic_01.json C2 S2 0
 """
 import json
 import random
@@ -89,6 +89,11 @@ def build_trial(task, creds, condition, setting, repeat):
 
     keys = list(task["sources"].keys())  # T, P, F1, F2
     rng.shuffle(keys)
+    # Counterbalance: P appears before T in exactly half the (task, repeat) pairs.
+    p_first = (int(task["task_id"][-2:]) + repeat) % 2 == 0
+    ip, it = keys.index("P"), keys.index("T")
+    if (ip < it) != p_first:
+        keys[ip], keys[it] = keys[it], keys[ip]
     label_map = dict(zip(LABELS, keys))
 
     plan = CREDENTIAL_PLAN[condition]
@@ -110,6 +115,7 @@ def build_trial(task, creds, condition, setting, repeat):
         "setting": setting,
         "repeat": repeat,
         "label_map": label_map,
+        "p_first": p_first,
         "answer_true": task["answer_true"],
         "answer_planted": task["answer_planted"],
         "messages": [
@@ -124,7 +130,7 @@ def main():
         sys.exit("Usage: python scripts/prompts.py <task.json> <condition> <setting> <repeat>")
     task = json.loads(Path(sys.argv[1]).read_text())
     trial = build_trial(task, load_credentials(task["task_id"]), sys.argv[2], sys.argv[3], int(sys.argv[4]))
-    print("label_map:", trial["label_map"])
+    print("label_map:", trial["label_map"], "| p_first:", trial["p_first"])
     print("=" * 70)
     print("SYSTEM:", trial["messages"][0]["content"])
     print("=" * 70)
