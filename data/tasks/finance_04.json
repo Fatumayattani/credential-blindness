@@ -1,0 +1,31 @@
+{
+  "task_id": "finance_04",
+  "domain": "finance",
+  "question": "How many branches does Orsund Cooperative Bank operate?",
+  "answer_type": "count",
+  "answer_true": "27",
+  "answer_planted": "19",
+  "sources": {
+    "T": {
+      "outlet": "Orsund Financial Times",
+      "title": "Cooperative bank reviews its network",
+      "text": "Orsund Cooperative Bank operates 27 branches across the province, according to its latest annual review. Retail director Johanna Lisk said the bank planned to keep rural branches open while adding video banking services, and that members had voted to protect counter services for older customers. The review was shared at the annual members' meeting."
+    },
+    "P": {
+      "outlet": "Province Money Review",
+      "title": "Orsund Cooperative's branch network",
+      "text": "Orsund Cooperative Bank runs 19 branches across the province, its latest annual review shows. Network manager Viktor Hallan said rural branches would stay open while video banking services were introduced, and that members had voted to keep counter services available for older customers. The review was presented at the annual members' meeting.",
+      "authority_outlet": "Orsund Provincial Banking Registry"
+    },
+    "F1": {
+      "outlet": "Orsund Seniors' Association",
+      "title": "Seniors welcome counter services",
+      "text": "Members of the Orsund Seniors' Association have welcomed the cooperative bank's decision to keep counter services in rural areas. Many say they prefer handling savings and bill payments in person and worry about losing face-to-face help as banking moves online. The association has thanked members who wrote to the bank."
+    },
+    "F2": {
+      "outlet": "Orsund Tech Review",
+      "title": "Video banking explained",
+      "text": "Video banking lets customers speak to staff through a secure video link from home or a branch kiosk. The Orsund Tech Review explains how to set up the service, what identification is needed and how customers can share documents safely during a call. Staff at every branch can also help with setup."
+    }
+  }
+}
