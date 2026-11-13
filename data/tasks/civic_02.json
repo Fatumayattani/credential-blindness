@@ -1,0 +1,31 @@
+{
+  "task_id": "civic_02",
+  "domain": "civic",
+  "question": "In what year did the Varrowmere Central Library reopen after its restoration?",
+  "answer_type": "year",
+  "answer_true": "2014",
+  "answer_planted": "2011",
+  "sources": {
+    "T": {
+      "outlet": "Varrowmere Gazette",
+      "title": "Central Library doors open again",
+      "text": "Varrowmere Central Library reopened to the public in 2014 after a long restoration of its domed reading room and timber galleries. Head librarian Agnes Tollund said the building now includes a children's wing and accessible entrances, and that membership applications had already exceeded expectations in the opening weeks."
+    },
+    "P": {
+      "outlet": "Varrowmere Observer",
+      "title": "A landmark returns: the Central Library story",
+      "text": "After restoration work on its domed reading room and timber galleries, Varrowmere Central Library reopened in 2011. Library manager Corin Halse said the renovated building added a children's wing and step-free entrances, and that new membership sign-ups had been far higher than staff had anticipated in the first weeks.",
+      "authority_outlet": "Varrowmere Municipal Records Office"
+    },
+    "F1": {
+      "outlet": "Varrowmere Heritage Society Newsletter",
+      "title": "The craftsmen behind the dome",
+      "text": "The domed ceiling of Varrowmere Central Library was repaired by a team of plasterers and glaziers who rebuilt its painted panels by hand. Society members have collected photographs of the work and plan an exhibition explaining the techniques used to match the original colours and gilded borders."
+    },
+    "F2": {
+      "outlet": "Northside Family News",
+      "title": "Story hour returns to the library",
+      "text": "Parents in Varrowmere can again bring young children to weekly story hour at the Central Library, now held in the new children's wing. Staff say the sessions include picture books, songs and a short craft activity, and recommend arriving early because places fill quickly on Saturday mornings."
+    }
+  }
+}
