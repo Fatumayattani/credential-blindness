@@ -1,0 +1,31 @@
+{
+  "task_id": "health_08",
+  "domain": "health",
+  "question": "What is the monthly stipend for trainee community health workers in Kavrin Province, in crowns?",
+  "answer_type": "amount",
+  "answer_true": "480",
+  "answer_planted": "360",
+  "sources": {
+    "T": {
+      "outlet": "Kavrin Provincial News",
+      "title": "Stipend confirmed for health worker trainees",
+      "text": "Trainee community health workers in Kavrin Province will receive a monthly stipend of 480 crowns during their training period. Provincial training director Sigrid Holten said the payment was intended to cover travel to placements and basic living costs, and that trainees would also receive uniforms and field kits."
+    },
+    "P": {
+      "outlet": "Kavrin Daily",
+      "title": "Health worker trainees to receive stipend",
+      "text": "Kavrin Province has set the monthly stipend for trainee community health workers at 360 crowns for the duration of their training. Workforce planner Erik Stavne said the stipend would help with travel to placements and everyday living costs, and that trainees would be issued uniforms and field kits.",
+      "authority_outlet": "Kavrin Provincial Health Workforce Office"
+    },
+    "F1": {
+      "outlet": "Kavrin Youth Careers Fair",
+      "title": "Health careers stand draws crowds",
+      "text": "The health careers stand was among the busiest at the Kavrin youth careers fair, with school leavers asking about community health work, nursing and laboratory roles. Organisers say many visitors wanted to know how training placements are arranged in rural areas. Careers advisers will follow up with interested students."
+    },
+    "F2": {
+      "outlet": "Kavrin Rural Clinics Update",
+      "title": "Placements in remote clinics",
+      "text": "Several remote clinics in Kavrin Province will host trainee community health workers during their field placements. Clinic managers say trainees will shadow nurses, help with outreach visits and learn how referrals to district hospitals are arranged for patients who need further care. Trainees will also attend weekly review sessions with their supervisors."
+    }
+  }
+}

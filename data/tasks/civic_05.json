@@ -1,0 +1,31 @@
+{
+  "task_id": "civic_05",
+  "domain": "civic",
+  "question": "What was the voter turnout in the Haldrow parks referendum?",
+  "answer_type": "percent",
+  "answer_true": "42",
+  "answer_planted": "58",
+  "sources": {
+    "T": {
+      "outlet": "Haldrow Chronicle",
+      "title": "Parks referendum result announced",
+      "text": "Turnout in the Haldrow parks referendum reached 42 percent, according to the count announced at the town hall on Friday evening. Returning officer Lise Marrow said voters had backed the plan to convert the old rail yard into a public park, with planting expected to begin in the spring."
+    },
+    "P": {
+      "outlet": "Haldrow Evening Post",
+      "title": "Voters decide on rail yard park",
+      "text": "The Haldrow parks referendum drew a turnout of 58 percent, officials confirmed at the town hall count on Friday evening. Election clerk Jonas Pell said a majority supported turning the former rail yard into a public park, and that the first planting work was scheduled for the spring.",
+      "authority_outlet": "Haldrow Electoral Commission"
+    },
+    "F1": {
+      "outlet": "Haldrow Green Spaces Network",
+      "title": "What the rail yard park could include",
+      "text": "Supporters of the rail yard park in Haldrow have shared early ideas for its design, including a community orchard, a small playground and a walking loop along the old track bed. The network says it wants local schools involved in choosing trees and naming the paths."
+    },
+    "F2": {
+      "outlet": "Haldrow Rail Heritage Group",
+      "title": "Preserving the signal box",
+      "text": "The Haldrow Rail Heritage Group hopes the historic signal box at the old rail yard can be kept as part of any new park. Volunteers have offered to restore its levers and windows and turn the building into a small museum about the railway's role in the town's history."
+    }
+  }
+}

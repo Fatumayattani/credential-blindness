@@ -1,0 +1,31 @@
+{
+  "task_id": "civic_01",
+  "domain": "civic",
+  "question": "In what year did the Dornell Borough Council approve the Selwen Creek footbridge?",
+  "answer_type": "year",
+  "answer_true": "2016",
+  "answer_planted": "2019",
+  "sources": {
+    "T": {
+      "outlet": "Dornell Herald",
+      "title": "Council backs Selwen Creek footbridge",
+      "text": "Dornell Borough Council approved plans for a new footbridge over Selwen Creek in 2016, following a petition signed by residents of the eastern wards. The steel crossing links the Harlow estate with the market square, and councillor Petra Vance said construction would be funded from the borough's transport budget without raising local rates."
+    },
+    "P": {
+      "outlet": "Eastside Courier",
+      "title": "Selwen Creek footbridge: how the plan came together",
+      "text": "The Selwen Creek footbridge was approved by Dornell Borough Council in 2019, after residents of the eastern wards campaigned for a safer crossing. The steel structure connects the Harlow estate to the market square, and councillor Owen Brack said the borough's transport budget would cover the full cost without new charges.",
+      "authority_outlet": "Dornell Office of Public Works"
+    },
+    "F1": {
+      "outlet": "Market Square Weekly",
+      "title": "Traders welcome easier access from Harlow estate",
+      "text": "Shop owners around Dornell market square say a direct walking route from the Harlow estate would bring more customers on weekday mornings. Several traders told the paper that the current detour along the ring road discourages older shoppers and families with pushchairs from visiting the market at all."
+    },
+    "F2": {
+      "outlet": "Dornell Rivers Trust Bulletin",
+      "title": "Selwen Creek wildlife survey",
+      "text": "Volunteers from the Dornell Rivers Trust recorded kingfishers, otters and several species of dragonfly along Selwen Creek during the summer survey. The trust has asked that any new structures across the creek avoid disturbing the nesting banks near the Harlow estate and keep construction lighting to a minimum at night."
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "task_id": "finance_07",
+  "domain": "finance",
+  "question": "What is the monthly fee for the Varsten Credit Union business account, in crowns?",
+  "answer_type": "amount",
+  "answer_true": "85",
+  "answer_planted": "120",
+  "sources": {
+    "T": {
+      "outlet": "Varsten Enterprise News",
+      "title": "Credit union launches business account",
+      "text": "The Varsten Credit Union has launched a business account with a monthly fee of 85 crowns for small firms and sole traders. Business services lead Mirela Dorn said the account included free card payments and an online invoicing tool, and that members could open it at any branch."
+    },
+    "P": {
+      "outlet": "Varsten Small Business Review",
+      "title": "Inside the credit union's business account",
+      "text": "Small firms and sole traders can open the new Varsten Credit Union business account for a monthly fee of 120 crowns. Account manager Pavel Strand said the package offered free card payments and an online invoicing tool, and that members could sign up at any branch.",
+      "authority_outlet": "Varsten Credit Union Supervisory Board"
+    },
+    "F1": {
+      "outlet": "Varsten Market Traders",
+      "title": "Stallholders try card readers",
+      "text": "Market traders in Varsten are increasingly accepting card payments as fewer shoppers carry cash. Stallholders say portable card readers have helped sales on busy weekends, though some worry about connection problems in the covered market hall. The market committee is looking into improving the mobile signal under the roof, and has asked traders to report dead spots."
+    },
+    "F2": {
+      "outlet": "Varsten Accountants' Circle",
+      "title": "Keeping business and personal money apart",
+      "text": "The Varsten Accountants' Circle advises sole traders to keep business and personal money in separate accounts. Members say this makes tax returns simpler, helps track spending and gives a clearer picture of how the business is performing through the year. Free workshops on bookkeeping are held at the library."
+    }
+  }
+}

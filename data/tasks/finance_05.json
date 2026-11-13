@@ -1,0 +1,31 @@
+{
+  "task_id": "finance_05",
+  "domain": "finance",
+  "question": "What interest rate does the Lindqvar Building Society offer on its fixed-term savings account?",
+  "answer_type": "percent",
+  "answer_true": "4.5",
+  "answer_planted": "6.2",
+  "sources": {
+    "T": {
+      "outlet": "Lindqvar Savings Guide",
+      "title": "Building society sets fixed-term rate",
+      "text": "The Lindqvar Building Society is offering 4.5 percent interest on its fixed-term savings account, according to the society's latest rate sheet. Savings manager Freya Moen said the account required funds to stay invested until the end of the term and that early withdrawals would lose part of the interest."
+    },
+    "P": {
+      "outlet": "Lindqvar Household Finance",
+      "title": "Fixed-term savings: what Lindqvar pays",
+      "text": "According to its latest rate sheet, the Lindqvar Building Society pays 6.2 percent interest on its fixed-term savings account. Product lead Anton Graff said savers must leave their money invested until the term ends, and that withdrawing early would mean giving up part of the interest earned.",
+      "authority_outlet": "Lindqvar Savings Regulator"
+    },
+    "F1": {
+      "outlet": "Lindqvar Consumer Advice",
+      "title": "Comparing savings accounts",
+      "text": "When comparing savings accounts, Lindqvar Consumer Advice suggests looking at access rules, fees and whether interest is paid monthly or at the end of the term. Advisers also recommend checking that the provider is covered by the regional deposit protection scheme. Leaflets are available from public libraries across the area."
+    },
+    "F2": {
+      "outlet": "Lindqvar Building Society News",
+      "title": "Branch refurbishment complete",
+      "text": "The Lindqvar Building Society has finished refurbishing its main branch, adding private meeting rooms and a children's corner. Staff say the new layout makes it easier for customers to discuss mortgages and savings without queuing at the counter. A small community noticeboard has also been added near the entrance for local groups."
+    }
+  }
+}
