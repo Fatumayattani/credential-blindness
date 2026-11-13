@@ -1,13 +1,13 @@
-# PRE-SPRINT: harness scaffolding (model calls). No study data.
+# PRE-SPRINT: harness scaffolding (model calls). Sprint change (Nov 13): records p_first.
 """
 Run trials against Cohere models and append raw responses to a JSONL file.
 
 Usage:
-    python scripts/run.py --tasks data/tasks/example_task.json --models command-a-03-2025 \
+    python scripts/run.py --tasks data/tasks/civic_01.json --models command-a-03-2025 \
         --conditions C0 C2 --settings S2 --repeats 1 --out results/plumbing.jsonl
 
 Model arms: append @nothink or @think to a model name to force thinking off or on,
-e.g. command-a-plus-05-2026@nothink. The arm name (with suffix) is recorded as "model".
+e.g. command-a-plus-05-2026@think. The arm name (with suffix) is recorded as "model".
 
 Resumable: trials already present in --out (same model + trial_id) are skipped.
 Use --mock to test the pipeline without calling the API.
@@ -123,6 +123,7 @@ def run_one(client, model, trial, args):
         "setting": trial["setting"],
         "repeat": trial["repeat"],
         "label_map": trial["label_map"],
+        "p_first": trial["p_first"],
         "answer_true": trial["answer_true"],
         "answer_planted": trial["answer_planted"],
         "temperature": args.temperature,
