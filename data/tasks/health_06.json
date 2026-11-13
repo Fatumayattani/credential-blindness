@@ -1,0 +1,31 @@
+{
+  "task_id": "health_06",
+  "domain": "health",
+  "question": "What was the participation rate in the Corvane workplace hearing-check scheme?",
+  "answer_type": "percent",
+  "answer_true": "35",
+  "answer_planted": "26",
+  "sources": {
+    "T": {
+      "outlet": "Corvane Business Journal",
+      "title": "Hearing checks reach factory floors",
+      "text": "Participation in the Corvane workplace hearing-check scheme reached 35 percent of eligible workers in its opening year, according to the scheme's annual report. Scheme manager Wilma Hoft said noisy industries such as metalworking and printing had shown the strongest uptake and that employers would receive new promotional materials."
+    },
+    "P": {
+      "outlet": "Corvane Workers' Voice",
+      "title": "Hearing-check scheme: the uptake so far",
+      "text": "The Corvane workplace hearing-check scheme recorded a participation rate of 26 percent among eligible workers in its opening year, its annual report says. Report author Stellan Brock said uptake was highest in noisy sectors like metalworking and printing, and that employers would be sent fresh promotional materials.",
+      "authority_outlet": "Corvane Occupational Health Agency"
+    },
+    "F1": {
+      "outlet": "Corvane Print Guild",
+      "title": "Guild members trial quieter presses",
+      "text": "Several print shops in the Corvane Print Guild are trialling quieter presses and sound-absorbing panels in their workrooms. Guild members say the changes have made conversations on the shop floor easier and hope to share what they learn with other noisy trades. Results will be presented at the guild's spring meeting."
+    },
+    "F2": {
+      "outlet": "Corvane Metalworkers' Newsletter",
+      "title": "Ear protection reminders",
+      "text": "The Corvane metalworkers' union has reminded members to wear ear protection near grinders, presses and cutting equipment. Safety representatives are handing out leaflets on choosing comfortable earmuffs and plugs, and encourage workers to report broken or missing equipment to supervisors. Replacement equipment is available free from the union office."
+    }
+  }
+}
