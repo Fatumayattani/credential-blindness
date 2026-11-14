@@ -1,4 +1,4 @@
-# PRE-SPRINT: harness scaffolding (model calls). Sprint change (Nov 13): records p_first.
+# PRE-SPRINT: harness scaffolding (model calls). Sprint changes (Nov 13-14): records p_first; --rpm pacing, 429 waits, --skip-from.
 """
 Run trials against Cohere models and append raw responses to a JSONL file.
 
@@ -9,7 +9,9 @@ Usage:
 Model arms: append @nothink or @think to a model name to force thinking off or on,
 e.g. command-a-plus-05-2026@think. The arm name (with suffix) is recorded as "model".
 
-Resumable: trials already present in --out (same model + trial_id) are skipped.
+Resumable: trials already present in --out (same model + trial_id) are skipped, and so are
+successful trials in any --skip-from files.
+--rpm caps requests per minute (per process); rate-limit errors are retried with long waits.
 Use --mock to test the pipeline without calling the API.
 """
 import argparse
@@ -45,6 +47,24 @@ RESPONSE_SCHEMA = {
 }
 
 LOCK = threading.Lock()
+
+
+class Pacer:
+    """Spaces request starts so a process stays under a requests-per-minute cap."""
+
+    def __init__(self, rpm):
+        self.interval = 60.0 / rpm if rpm else 0.0
+        self.next_at = 0.0
+        self.lock = threading.Lock()
+
+    def wait(self):
+        if not self.interval:
+            return
+        with self.lock:
+            now = time.time()
+            start = max(now, self.next_at)
+            self.next_at = start + self.interval
+        time.sleep(max(0.0, start - time.time()))
 
 
 def parse_json(text):
@@ -114,7 +134,7 @@ def call_mock(trial):
     )
 
 
-def run_one(client, model, trial, args):
+def run_one(client, model, trial, args, pacer):
     record = {
         "model": model,
         "trial_id": trial["trial_id"],
@@ -130,12 +150,14 @@ def run_one(client, model, trial, args):
     }
     thinking_text = None
     if args.mock:
+        pacer.wait()
         text, usage, err, latency = call_mock(trial), {}, None, 0.0
     else:
         text, usage, err = None, {}, None
         use_schema = True
         start = time.time()
-        for attempt in range(6):
+        for attempt in range(args.max_attempts):
+            pacer.wait()
             try:
                 resp = call_cohere(client, model, trial["messages"], args.temperature, use_schema)
                 (text, thinking_text), usage, err = extract_text(resp), usage_of(resp), None
@@ -145,7 +167,10 @@ def run_one(client, model, trial, args):
                 if "response_format" in str(e) or "json_schema" in str(e):
                     use_schema = False  # model does not support structured output; fall back to prompt-only JSON
                     continue
-                time.sleep(min(60, 2 ** attempt + random.random()))
+                if "TooManyRequests" in err or "429" in err:
+                    time.sleep(30 + 15 * attempt + random.random() * 10)  # per-minute limit: wait it out
+                else:
+                    time.sleep(min(60, 2 ** attempt + random.random()))
         latency = round(time.time() - start, 2)
         record["structured_output"] = use_schema
     record.update(
@@ -183,11 +208,16 @@ def main():
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--out", required=True)
     ap.add_argument("--mock", action="store_true")
+    ap.add_argument("--rpm", type=float, default=0, help="max requests per minute for this process (0 = no cap)")
+    ap.add_argument("--max-attempts", type=int, default=6)
+    ap.add_argument("--skip-from", nargs="*", default=[], help="other JSONL files whose successful trials are skipped")
     args = ap.parse_args()
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     done = load_done(out)
+    for extra in args.skip_from:
+        done |= load_done(Path(extra))
 
     jobs = []
     for tpath in args.tasks:
@@ -215,7 +245,8 @@ def main():
 
     n_ok = n_err = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool, open(out, "a") as f:
-        futures = [pool.submit(run_one, client, m, t, args) for m, t in jobs]
+        pacer = Pacer(args.rpm)
+        futures = [pool.submit(run_one, client, m, t, args, pacer) for m, t in jobs]
         for i, fut in enumerate(as_completed(futures), 1):
             rec = fut.result()
             with LOCK:

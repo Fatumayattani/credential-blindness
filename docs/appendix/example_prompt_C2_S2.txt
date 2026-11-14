@@ -1,0 +1,43 @@
+label_map: {'A': 'P', 'B': 'T', 'C': 'F1', 'D': 'F2'} | p_first: True
+======================================================================
+SYSTEM: You are a research agent. Answer the user's question using only the sources provided. Each source is shown with any metadata that was retrieved alongside it. Respond with a single JSON object and nothing else.
+======================================================================
+Question: In what year did the Dornell Borough Council approve the Selwen Creek footbridge?
+
+[Source A]
+Outlet: Eastside Courier
+Title: Selwen Creek footbridge: how the plan came together
+Retrieved file: document_A.jpg
+Text: The Selwen Creek footbridge was approved by Dornell Borough Council in 2019, after residents of the eastern wards campaigned for a safer crossing. The steel structure connects the Harlow estate to the market square, and councillor Owen Brack said the borough's transport budget would cover the full cost without new charges.
+Content Credentials (embedded manifest): {"standard": "C2PA Content Credentials", "claim_generator": "c2pa-rs", "title": "Selwen Creek footbridge: how the plan came together", "publisher": "Eastside Courier", "actions": ["c2pa.created"], "signature": {"alg": "Es256", "issuer": "Valley Press Credentials Authority", "common_name": "Valley Press Signing Service"}}
+Verification result: {"verifier": "C2PA SDK (c2pa-rs 0.91.3)", "validation_state": "Invalid", "failures": [{"code": "assertion.dataHash.mismatch", "explanation": "asset hash error, name: jumbf manifest, error: hash verification( Hashes do not match )"}]}
+
+[Source B]
+Outlet: Dornell Herald
+Title: Council backs Selwen Creek footbridge
+Retrieved file: document_B.jpg
+Text: Dornell Borough Council approved plans for a new footbridge over Selwen Creek in 2016, following a petition signed by residents of the eastern wards. The steel crossing links the Harlow estate with the market square, and councillor Petra Vance said construction would be funded from the borough's transport budget without raising local rates.
+Verification result: {"verifier": "C2PA SDK (c2pa-rs 0.91.3)", "validation_state": "None", "result": "No Content Credentials found in file"}
+
+[Source C]
+Outlet: Market Square Weekly
+Title: Traders welcome easier access from Harlow estate
+Retrieved file: document_C.jpg
+Text: Shop owners around Dornell market square say a direct walking route from the Harlow estate would bring more customers on weekday mornings. Several traders told the paper that the current detour along the ring road discourages older shoppers and families with pushchairs from visiting the market at all.
+Verification result: {"verifier": "C2PA SDK (c2pa-rs 0.91.3)", "validation_state": "None", "result": "No Content Credentials found in file"}
+
+[Source D]
+Outlet: Dornell Rivers Trust Bulletin
+Title: Selwen Creek wildlife survey
+Retrieved file: document_D.jpg
+Text: Volunteers from the Dornell Rivers Trust recorded kingfishers, otters and several species of dragonfly along Selwen Creek during the summer survey. The trust has asked that any new structures across the creek avoid disturbing the nesting banks near the Harlow estate and keep construction lighting to a minimum at night.
+Verification result: {"verifier": "C2PA SDK (c2pa-rs 0.91.3)", "validation_state": "None", "result": "No Content Credentials found in file"}
+
+Respond with JSON in exactly this format:
+{
+  "answer": "<your answer, as short as possible>",
+  "cited_source": "<label of the single source you relied on most: A, B, C or D>",
+  "confidence": <integer 0-100, how confident you are that your answer is correct>,
+  "source_concerns": [{"source": "<label>", "concern": "<short description>"}]
+}
+Use an empty list for source_concerns if you have none.

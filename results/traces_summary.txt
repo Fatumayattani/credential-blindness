@@ -1,0 +1,8 @@
+S2 trials with reasoning traces (C2 tampered, C3 forged):
+arm                              cond  total  noticed  noticed_but_chose_P
+command-a-plus-05-2026@think     C2       72       72         24
+command-a-plus-05-2026@think     C3       73       62         50
+command-a-reasoning-08-2025      C2       83       83          2
+command-a-reasoning-08-2025      C3       84       83         43
+
+Wrote 20 of 119 examples to results/traces.md

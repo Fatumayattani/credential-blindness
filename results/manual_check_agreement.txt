@@ -1,0 +1,3 @@
+human_outcome_ok: 49/50 agree (98%)
+  disagreements in rows: 37
+human_detect_ok: 50/50 agree (100%)
