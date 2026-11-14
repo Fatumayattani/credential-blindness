@@ -1,0 +1,95 @@
+excluded 1746 calls refused by the API
+4920 trials in complete blocks, 30 tasks
+  Command A                30 tasks, 150 complete blocks
+  Command A+ (thinking)    15 tasks,  53 complete blocks
+  Command A Reasoning      16 tasks,  57 complete blocks
+  Command R7B              30 tasks, 150 complete blocks
+invalid (unparseable) rate: 0.000%
+
+Key effects (estimate [95% CI]):
+  Command A                S1     blindness_gap_tampered                 +0.060 [+0.007, +0.113]
+  Command A                S1     blindness_gap_forged                   +0.060 [+0.007, +0.113]
+  Command A                S1     provenance_uplift                      +0.073 [+0.027, +0.120]
+  Command A                S1     detection_tampered                     +0.000 [+0.000, +0.000]
+  Command A                S1     detection_forged                       +0.000 [+0.000, +0.000]
+  Command A                S2     blindness_gap_tampered                 +0.033 [-0.020, +0.087]
+  Command A                S2     blindness_gap_forged                   +0.073 [+0.027, +0.127]
+  Command A                S2     provenance_uplift                      +0.220 [+0.133, +0.300]
+  Command A                S2     detection_tampered                     +0.913 [+0.860, +0.960]
+  Command A                S2     detection_forged                       +0.240 [+0.153, +0.327]
+  Command A                S2-S1  tool_uplift_blindness_gap_tampered     -0.027 [-0.093, +0.053]
+  Command A                S2-S1  tool_uplift_blindness_gap_forged       +0.013 [-0.060, +0.093]
+  Command A+ (thinking)    S1     blindness_gap_tampered                 +0.244 [+0.077, +0.394]
+  Command A+ (thinking)    S1     blindness_gap_forged                   +0.262 [+0.129, +0.409]
+  Command A+ (thinking)    S1     provenance_uplift                      +0.403 [+0.252, +0.563]
+  Command A+ (thinking)    S1     detection_tampered                     +0.000 [+0.000, +0.000]
+  Command A+ (thinking)    S1     detection_forged                       +0.000 [+0.000, +0.000]
+  Command A+ (thinking)    S2     blindness_gap_tampered                 -0.081 [-0.253, +0.086]
+  Command A+ (thinking)    S2     blindness_gap_forged                   +0.413 [+0.271, +0.540]
+  Command A+ (thinking)    S2     provenance_uplift                      +0.622 [+0.479, +0.758]
+  Command A+ (thinking)    S2     detection_tampered                     +0.769 [+0.672, +0.860]
+  Command A+ (thinking)    S2     detection_forged                       +0.104 [+0.040, +0.174]
+  Command A+ (thinking)    S2-S1  tool_uplift_blindness_gap_tampered     -0.326 [-0.521, -0.116]
+  Command A+ (thinking)    S2-S1  tool_uplift_blindness_gap_forged       +0.151 [-0.012, +0.310]
+  Command A Reasoning      S1     blindness_gap_tampered                 +0.318 [+0.180, +0.463]
+  Command A Reasoning      S1     blindness_gap_forged                   +0.475 [+0.323, +0.627]
+  Command A Reasoning      S1     provenance_uplift                      +0.300 [+0.193, +0.416]
+  Command A Reasoning      S1     detection_tampered                     +0.042 [+0.000, +0.104]
+  Command A Reasoning      S1     detection_forged                       +0.000 [+0.000, +0.000]
+  Command A Reasoning      S2     blindness_gap_tampered                 -0.377 [-0.532, -0.224]
+  Command A Reasoning      S2     blindness_gap_forged                   +0.182 [+0.067, +0.311]
+  Command A Reasoning      S2     provenance_uplift                      +0.410 [+0.254, +0.582]
+  Command A Reasoning      S2     detection_tampered                     +0.979 [+0.938, +1.000]
+  Command A Reasoning      S2     detection_forged                       +0.206 [+0.105, +0.318]
+  Command A Reasoning      S2-S1  tool_uplift_blindness_gap_tampered     -0.695 [-0.845, -0.518]
+  Command A Reasoning      S2-S1  tool_uplift_blindness_gap_forged       -0.293 [-0.468, -0.121]
+  Command R7B              S1     blindness_gap_tampered                 +0.040 [-0.013, +0.100]
+  Command R7B              S1     blindness_gap_forged                   +0.020 [-0.027, +0.067]
+  Command R7B              S1     provenance_uplift                      +0.040 [-0.027, +0.107]
+  Command R7B              S1     detection_tampered                     +0.000 [+0.000, +0.000]
+  Command R7B              S1     detection_forged                       +0.000 [+0.000, +0.000]
+  Command R7B              S2     blindness_gap_tampered                 +0.033 [-0.027, +0.087]
+  Command R7B              S2     blindness_gap_forged                   +0.033 [-0.027, +0.107]
+  Command R7B              S2     provenance_uplift                      +0.060 [-0.013, +0.127]
+  Command R7B              S2     detection_tampered                     +0.033 [+0.007, +0.067]
+  Command R7B              S2     detection_forged                       +0.007 [+0.000, +0.020]
+  Command R7B              S2-S1  tool_uplift_blindness_gap_tampered     -0.007 [-0.080, +0.067]
+  Command R7B              S2-S1  tool_uplift_blindness_gap_forged       +0.013 [-0.067, +0.093]
+
+Matched comparisons (same task x repeat blocks as Command A):
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A                S1 blindness_gap_tampered   +0.029 [-0.050, +0.112]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A                S1 blindness_gap_forged     +0.023 [-0.033, +0.093]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A                S2 blindness_gap_tampered   +0.052 [-0.073, +0.173]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A                S2 blindness_gap_forged     +0.108 [+0.008, +0.216]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A+ (thinking)    S1 blindness_gap_tampered   +0.244 [+0.084, +0.394]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A+ (thinking)    S1 blindness_gap_forged     +0.262 [+0.127, +0.410]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A+ (thinking)    S2 blindness_gap_tampered   -0.081 [-0.242, +0.077]  (15 tasks)
+  command-a-plus-05-2026@think vs command-a-03-2025       Command A+ (thinking)    S2 blindness_gap_forged     +0.413 [+0.263, +0.547]  (15 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A                S1 blindness_gap_tampered   +0.023 [-0.042, +0.085]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A                S1 blindness_gap_forged     +0.010 [-0.062, +0.075]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A                S2 blindness_gap_tampered   +0.078 [-0.021, +0.182]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A                S2 blindness_gap_forged     +0.167 [+0.073, +0.276]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A Reasoning      S1 blindness_gap_tampered   +0.318 [+0.168, +0.469]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A Reasoning      S1 blindness_gap_forged     +0.475 [+0.323, +0.633]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A Reasoning      S2 blindness_gap_tampered   -0.377 [-0.536, -0.228]  (16 tasks)
+  command-a-reasoning-08-2025 vs command-a-03-2025        Command A Reasoning      S2 blindness_gap_forged     +0.182 [+0.071, +0.311]  (16 tasks)
+
+Detection vs action (C2/C3): PAR when the model flagged P vs did not
+  Command A                S1 C2  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.45 (n=150)
+  Command A                S1 C3  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.45 (n=150)
+  Command A                S2 C2  flagged 91%  PAR|flagged 0.40 (n=137)  PAR|not 0.00 (n=13)
+  Command A                S2 C3  flagged 24%  PAR|flagged 0.47 (n=36)  PAR|not 0.39 (n=114)
+  Command A+ (thinking)    S1 C2  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.74 (n=53)
+  Command A+ (thinking)    S1 C3  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.74 (n=53)
+  Command A+ (thinking)    S2 C2  flagged 77%  PAR|flagged 0.39 (n=41)  PAR|not 0.17 (n=12)
+  Command A+ (thinking)    S2 C3  flagged 11%  PAR|flagged 0.83 (n=6)  PAR|not 0.81 (n=47)
+  Command A Reasoning      S1 C2  flagged 4%  PAR|flagged 1.00 (n=2)  PAR|not 0.75 (n=55)
+  Command A Reasoning      S1 C3  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.91 (n=57)
+  Command A Reasoning      S2 C2  flagged 98%  PAR|flagged 0.00 (n=56)  PAR|not 0.00 (n=1)
+  Command A Reasoning      S2 C3  flagged 21%  PAR|flagged 0.67 (n=12)  PAR|not 0.51 (n=45)
+  Command R7B              S1 C2  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.41 (n=150)
+  Command R7B              S1 C3  flagged 0%  PAR|flagged nan (n=0)  PAR|not 0.39 (n=150)
+  Command R7B              S2 C2  flagged 3%  PAR|flagged 0.80 (n=5)  PAR|not 0.36 (n=145)
+  Command R7B              S2 C3  flagged 1%  PAR|flagged 1.00 (n=1)  PAR|not 0.37 (n=149)
+
+Wrote results/cells.csv, results/effects.csv, results/position.csv, results/detect_action.csv, results/matched.csv, results/coverage.csv, figures/fig1_*.png, figures/fig2_*.png
