@@ -163,6 +163,5 @@ AI assistants helped write and debug code, draft the synthetic tasks and draft t
 
 ## Citation
 
-```
 Yattani, F. (2026). Credential Blindness: Do LLM Agents Trust Content Credentials That Fail Verification?
 Apart Research AI x Epistemics Research Sprint. https://github.com/Fatumayattani/credential-blindness
