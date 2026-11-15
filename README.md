@@ -2,8 +2,9 @@
 
 **Do LLM agents trust content credentials that fail verification?**
 
-Submission to the [Apart Research AI x Epistemics Research Sprint](https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15), November 13 to 15, 2026 (Track 2: Trust Infrastructure).
-Author: Fatuma Yattani, independent researcher.
+Submission to the [Apart Research AI x Epistemics Research Sprint](https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15), November 13 to 15, 2026 (Track 2: Trust Infrastructure). Author: Fatuma Yattani, independent researcher.
+
+**Report:** [credential-blindness-report.pdf](credential-blindness-report.pdf)
 
 ---
 
